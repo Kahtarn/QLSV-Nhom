@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4F6AECF-3004-45BD-9FD1-8D3739C8BF6C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project_QuanLiSinhVien_DoAn</RootNamespace>
+    <AssemblyName>Project_QuanLiSinhVien_DoAn</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\KiemTraDangNhapBUS.cs" />
+    <Compile Include="BUS\PhanCongBUS.cs" />
+    <Compile Include="BUS\QuanLiGiaoVienBUS.cs" />
+    <Compile Include="BUS\QuanLiKhoaBUS.cs" />
+    <Compile Include="BUS\QuanLiLopBUS.cs" />
+    <Compile Include="BUS\QuanLiMonHocBUS.cs" />
+    <Compile Include="BUS\QuanLiSinhVienBUS.cs" />
+    <Compile Include="BUS\QuanLiUsersBUS.cs" />
+    <Compile Include="BUS\User_GiaoVienBUS.cs" />
+    <Compile Include="BUS\User_SinhVienBUS.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\KiemTraDangNhapDAO.cs" />
+    <Compile Include="DAO\PhanCongDAO.cs" />
+    <Compile Include="DAO\QuanLiGiaoVienDAO.cs" />
+    <Compile Include="DAO\QuanLiKhoaDAO.cs" />
+    <Compile Include="DAO\QuanLiLopDAO.cs" />
+    <Compile Include="DAO\QuanLiMonHocDAO.cs" />
+    <Compile Include="DAO\QuanLiSinhVienDAO.cs" />
+    <Compile Include="DAO\QuanLiUsersDAO.cs" />
+    <Compile Include="DAO\User_GiaoVienDAO.cs" />
+    <Compile Include="DAO\User_SinhVienDAO.cs" />
+    <Compile Include="DTO\Diem.cs" />
+    <Compile Include="DTO\GiaoVien.cs" />
+    <Compile Include="DTO\Khoa.cs" />
+    <Compile Include="DTO\Lop.cs" />
+    <Compile Include="DTO\MonHoc.cs" />
+    <Compile Include="DTO\PhanCong.cs" />
+    <Compile Include="DTO\SinhVien.cs" />
+    <Compile Include="DTO\Users.cs" />
+    <Compile Include="GUI\frm_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_Admin.Designer.cs">
+      <DependentUpon>frm_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_GiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_GiaoVien.Designer.cs">
+      <DependentUpon>frm_GiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_inAnGVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_inAnGVien.Designer.cs">
+      <DependentUpon>frm_inAnGVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_SinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm_SinhVien.Designer.cs">
+      <DependentUpon>frm_SinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QUANLISINHVIEN_DBDataSet.cs">
+      <DependentUpon>QUANLISINHVIEN_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLISINHVIEN_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QUANLISINHVIEN_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="USControl\uc_PhanCong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USControl\uc_PhanCong.Designer.cs">
+      <DependentUpon>uc_PhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USControl\uc_QLKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USControl\uc_QLKhoa.Designer.cs">
+      <DependentUpon>uc_QLKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USControl\uc_QLLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USControl\uc_QLLop.Designer.cs">
+      <DependentUpon>uc_QLLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USControl\uc_QLMonHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USControl\uc_QLMonHoc.Designer.cs">
+      <DependentUpon>uc_QLMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USControl\uc_QLSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USControl\uc_QLSV.Designer.cs">
+      <DependentUpon>uc_QLSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USControl\uc_QLGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USControl\uc_QLGV.Designer.cs">
+      <DependentUpon>uc_QLGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USControl\uc_QLUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USControl\uc_QLUsers.Designer.cs">
+      <DependentUpon>uc_QLUsers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\frm_Admin.resx">
+      <DependentUpon>frm_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_GiaoVien.resx">
+      <DependentUpon>frm_GiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_inAnGVien.resx">
+      <DependentUpon>frm_inAnGVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm_SinhVien.resx">
+      <DependentUpon>frm_SinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RptforGiaoVien.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="USControl\uc_PhanCong.resx">
+      <DependentUpon>uc_PhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USControl\uc_QLKhoa.resx">
+      <DependentUpon>uc_QLKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USControl\uc_QLLop.resx">
+      <DependentUpon>uc_QLLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USControl\uc_QLMonHoc.resx">
+      <DependentUpon>uc_QLMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USControl\uc_QLSV.resx">
+      <DependentUpon>uc_QLSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USControl\uc_QLGV.resx">
+      <DependentUpon>uc_QLGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USControl\uc_QLUsers.resx">
+      <DependentUpon>uc_QLUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QUANLISINHVIEN_DBDataSet.xsc">
+      <DependentUpon>QUANLISINHVIEN_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QUANLISINHVIEN_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QUANLISINHVIEN_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QUANLISINHVIEN_DBDataSet.xss">
+      <DependentUpon>QUANLISINHVIEN_DBDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resource\print.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
